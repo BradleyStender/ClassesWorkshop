@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Dog extends Pet {
@@ -9,48 +8,37 @@ public class Dog extends Pet {
     private boolean canFetch;
     private String coatType;
     private Scanner input = new Scanner(System.in);
-    private Scanner coat = new Scanner(System.in);
+    //  protected int dogyears = age * 7;
+
+    public Dog(String ownerName, String petName, String homeAddress, int age, char gender) {
+        super(ownerName, petName, homeAddress, age, gender);
+    }
 
     public Dog() {
+        super();
 
-//        do {
-//            try {
-                System.out.println("What is your dog's name?");
-                setPetName(input.nextLine());
-                System.out.println("Does " + getPetName() + " like to take walks? True or False");
-                setLikesWalks(input.nextBoolean());
-//                System.out.println("Can" + " " + getPetName() + " " + "fetch? True or False.");
-//                setCanFetch(input.nextBoolean());
-//                System.out.println("what type of coat does " + " " + getPetName() + " " + " have?");
-//                setCoatType(coat.nextLine());
-//                System.out.println("how old is " + "" + getPetName() + "?");
-//                setAge(input.nextInt());
-//
-//            } catch (InputMismatchException ime) {
-//                System.out.println("This is not a true or false statement. please. try again!");
-//            }
-//        } while (setLikesWalks(true || false) && setCanFetch(true || false));
-//
-//
+        System.out.println("what is your dogs name?");
+        String name = input.nextLine();
+        System.out.println("How old is " + name +   "?");
+        int age = input.nextInt();
+        System.out.println(name + " is " + age + " in human years and " + age * 7 + " in dog years.");
     }
+
 
     public boolean isLikesWalks() {
         return likesWalks;
     }
 
-    public boolean setLikesWalks(boolean likesWalks) {
+    public void setLikesWalks(boolean likesWalks) {
         this.likesWalks = likesWalks;
-        return likesWalks;
     }
 
     public boolean isCanFetch() {
-
         return canFetch;
     }
 
-    public boolean setCanFetch(boolean canFetch) {
+    public void setCanFetch(boolean canFetch) {
         this.canFetch = canFetch;
-        return canFetch;
     }
 
     public String getCoatType() {
@@ -61,10 +49,10 @@ public class Dog extends Pet {
         this.coatType = coatType;
     }
 
-    @Override
-    protected String  makeSound() {
-        return super.makeSound();
-    }
+//    @Override
+//    protected String makeSound() {
+//        return super.makeSound() + "BUT dogs bark";
+//    }
 
 
 

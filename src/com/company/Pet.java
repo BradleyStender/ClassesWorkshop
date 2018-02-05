@@ -5,15 +5,19 @@ public class Pet {
     private String ownerName;
     private String petName;
     private String homeAddress;
-    private int age;
+    private int ages;
     private char gender;
 
     public Pet(String ownerName, String petName, String homeAddress, int age, char gender) {
         this.ownerName = ownerName;
         this.petName = petName;
         this.homeAddress = homeAddress;
-        this.age = age;
+        this.ages = age;
         this.gender = gender;
+    }
+
+    public Pet() {
+
     }
 
     public String getOwnerName() {
@@ -41,11 +45,11 @@ public class Pet {
     }
 
     public int getAge() {
-        return age;
+        return ages;
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.ages = age;
     }
 
     public char getGender() {
@@ -56,10 +60,16 @@ public class Pet {
         this.gender = gender;
     }
 
-    protected String makeSound() {
+//    protected String makeSound() {
+//
+//        return "Pets make no sound.";
+//    }
+//
+//    protected Integer age() {
+//
+//        return
+//    }
 
-        return "Pets make no sound.";
-
-    }
 
 }
+
